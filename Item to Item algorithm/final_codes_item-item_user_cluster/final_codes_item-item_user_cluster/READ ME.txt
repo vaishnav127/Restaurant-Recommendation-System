@@ -1,0 +1,11 @@
+Step 1. - Run the file res_sim_matrix.R
+Step 2. - Run the file user_cluster_allocation.R
+Step 3. - Run the file similar_res.R
+Step 4. - Run the file new_user_item-item.R
+
+Note- Please make this as the default directory of your Rstudio and after that you are good to go! :)
+
+P.S. final file (final_recommendation) contains first column as the id of the new user followed by 50 columns of recommended restaurants.
+
+
+Accuracy- 14.2%
