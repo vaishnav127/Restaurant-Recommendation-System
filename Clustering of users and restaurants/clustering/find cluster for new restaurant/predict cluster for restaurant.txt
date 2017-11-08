@@ -1,0 +1,118 @@
+library(varhandle)
+
+centroids=read.csv("D:/rachana maam/business wale clusters/clusters and centroids/centroids.csv")
+###############new_cen is the modified centroid file to apply code of min distance######################
+new_cen=data.frame(matrix(ncol=(ncol(centroids)),nrow=nrow(centroids)))
+colnames(new_cen)=colnames(centroids)
+
+#############copying the following columns from centroids######################
+
+for(i in 1:nrow(new_cen))
+{
+ new_cen[i,c(3:4,19:31,33:142)]=centroids[i,c(3:4,19:31,33:142)]
+}
+
+
+
+
+
+
+
+###################### replace yes no entries of new_cen with integer ##################
+for(i in c("BusinessAcceptsCreditCards","BikeParking","WiFi","RestaurantsDelivery","GoodForKids","parking","HasTV","OutdoorSeating",
+           "WheelchairAccessible","RestaurantsTakeOut","RestaurantsReservations","RestaurantsTableService"))
+{
+new_cen[,i][centroids[,i] == "No"] <- 0
+new_cen[,i][centroids[,i] == "Yes"] <- 1
+}
+new_cen$Alcohol[centroids$Alcohol == "full_bar"] <- 1
+new_cen$Alcohol[centroids$Alcohol == "beer_and_wine"] <- 1
+new_cen$Alcohol[centroids$Alcohol == "No"] <- 0
+
+new_cen$type.x[centroids$type.x == "review"] <- 0
+new_cen$type.y[centroids$type.y == "user"] <- 0
+
+new_cen$Ambience[centroids$Ambience == "casual"] <- 0
+new_cen$Ambience[centroids$Ambience == "trendy"] <- 1
+new_cen$Ambience[centroids$Ambience == "hipster"] <- 1
+new_cen$Ambience[centroids$Ambience == "Romantic"] <- 1
+new_cen$Ambience[centroids$Ambience == "divey"] <- 1
+new_cen$Ambience[centroids$Ambience == "touristy"] <- 1
+new_cen$Ambience[centroids$Ambience == "intimate"] <- 1
+
+write.csv(new_cen,"C:/Users/dell/Desktop/sample_cen.csv",row.names=FALSE)
+####################### attributes ##################################
+
+preferences=read.csv("D:/rachana maam/find cluster for new restaurant/preferences.csv")#preferences for restaurants
+
+new_preferences=data.frame(matrix(ncol=(ncol(preferences)),nrow=nrow(preferences)))
+colnames(new_preferences)=colnames(preferences)
+
+############copying the following columns from preferences###############333
+
+
+#for(i in 1:nrow(new_preferences))
+#{
+# new_preferences[i,c(3:4,19:31,33:142)]=preferences[i,c(3:4,19:31,33:142)]
+#}
+
+
+for(i in c(3:4,19:31,33:142))
+{
+new_preferences[,i]=preferences[,i]
+}
+
+
+
+
+
+
+
+
+###################### replace yes no entries of new_preferences with integer ##################
+for(i in c("BusinessAcceptsCreditCards","BikeParking","WiFi","RestaurantsDelivery","GoodForKids","parking","HasTV","OutdoorSeating",
+           "WheelchairAccessible","RestaurantsTakeOut","RestaurantsReservations","RestaurantsTableService"))
+{
+new_preferences[,i][preferences[,i] == "No"] <- 0
+new_preferences[,i][preferences[,i] == "Yes"] <- 1
+}
+new_preferences$Alcohol[preferences$Alcohol == "full_bar"] <- 1
+new_preferences$Alcohol[preferences$Alcohol == "beer_and_wine"] <- 1
+new_preferences$Alcohol[preferences$Alcohol == "No"] <- 0
+
+#new_preferences$type.x[preferences$type.x == "review"] <- 0
+new_preferences$type.x <- 0
+
+new_preferences$type.y[preferences$type.y == "user"] <- 0
+
+new_preferences$Ambience[preferences$Ambience == "casual"] <- 0
+new_preferences$Ambience[preferences$Ambience == "trendy"] <- 1
+new_preferences$Ambience[preferences$Ambience == "hipster"] <- 1
+new_preferences$Ambience[preferences$Ambience == "Romantic"] <- 1
+new_preferences$Ambience[preferences$Ambience == "divey"] <- 1
+new_preferences$Ambience[preferences$Ambience == "touristy"] <- 1
+new_preferences$Ambience[new_preferences$Ambience == "intimate"] <- 1
+
+write.csv(new_preferences,"C:/Users/dell/Desktop/sample_preferences.csv",row.names=FALSE)
+
+########################### predict cluster with min distance ##############################
+#user=new_preferences[,3:ncol(new_preferences)]
+#center=new_cen[,3:ncol(new_preferences)]
+user=new_preferences[,c(3:23,25:ncol(new_preferences))]
+center=new_cen[,c(3:23,25:ncol(new_cen))]
+closest.cluster <- function(x) {
+  cluster.dist <- apply(center, 1, function(y) sqrt(sum((x-y)^2)))
+  return(which.min(cluster.dist)[1])
+}
+clusters2 <- apply(user, 1, closest.cluster)
+
+##########cluster_number gives the cluster for ith user##############
+new_preferences$business_id=unfactor(preferences$business_id)
+o=data.frame(matrix(ncol=1,nrow=nrow(new_preferences)))
+
+o=new_preferences[,2]
+f=cbind(o,clusters2)
+colnames(f)<- c("business_id","cluster_allocated")
+write.csv(f,"C:/Users/dell/Desktop/sample.csv",row.names=FALSE)
+
+

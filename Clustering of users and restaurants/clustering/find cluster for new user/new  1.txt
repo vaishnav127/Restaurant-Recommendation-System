@@ -1,0 +1,111 @@
+attribute_3=read.csv("D:/rachana maam/find the new cluster for user/arranged_attribute_6000.csv")#attribute3 wali files
+
+new_user_preferences=read.csv("D:/rachana maam/find the new cluster for user/preferences.csv")#preferences of new users data
+
+#new file made from preferences of user having same columns as attribute_3
+new_user=data.frame(matrix(ncol=(ncol(attribute_3)),nrow=nrow(new_user_preferences)))
+
+colnames(new_user)=colnames(attribute_3)
+
+for(i in 1:nrow(new_user_preferences))
+{
+new_user[i,2]=NA
+
+  #copying the following columns as it is
+  new_user$user_id <- new_user_preferences$user_id
+  new_user[i,c(3:125)]=new_user_preferences[i,c(3:125)]
+}
+colnames(new_user)[33] <- "SaladBar"
+colnames(new_user)[37] <- "WhiskeyBar"
+colnames(new_user)[86] <- "TapasBar"
+colnames(new_user)[85] <- "SportsBar"
+#write.csv(new_user,"C:/Users/dell/Documents/new_user.csv",row.names=FALSE)
+
+cen=read.csv("D:/rachana maam/find the new cluster for user/Cluster_centroids.csv")#centroid wali file
+
+#new file made from centroids having same columns as attribute_3
+new_cen=data.frame(matrix(ncol=(ncol(attribute_3)),nrow=nrow(cen)))
+
+colnames(new_cen)=colnames(attribute_3)
+
+#copying the following columns as it is from centroids
+new_cen$BusinessAcceptsCreditCards=unfactor(cen$BusinessAcceptsCreditCards)
+new_cen$BikeParking=unfactor(cen$BikeParking)
+new_cen$WiFi=unfactor(cen$WiFi)
+new_cen$RestaurantsDelivery=unfactor(cen$RestaurantsDelivery)
+new_cen$HappyHour=unfactor(cen$HappyHour)
+new_cen$Smoking=unfactor(cen$Smoking)
+new_cen$Alcohol=unfactor(cen$Alcohol)
+new_cen$parking=unfactor(cen$parking)
+new_cen$DogsAllowed=unfactor(cen$DogsAllowed)
+new_cen$HasTV=unfactor(cen$HasTV)
+new_cen$OutdoorSeating=unfactor(cen$OutdoorSeating)
+new_cen$WheelchairAccessible=unfactor(cen$WheelchairAccessible)
+new_cen$RestaurantsTakeOut=unfactor(cen$RestaurantsTakeOut)
+new_cen$RestaurantsReservations=unfactor(cen$RestaurantsReservations)
+new_cen$RestaurantsTableService=unfactor(cen$RestaurantsTableService)
+new_cen$DriveThru=unfactor(cen$DriveThru)
+
+
+#change colnames of few columns
+colnames(new_cen)[33] <- "SaladBar"
+colnames(new_cen)[37] <- "WhiskeyBar"
+colnames(new_cen)[86] <- "TapasBar"
+colnames(new_cen)[85] <- "SportsBar"
+
+for(i in 1:nrow(cen))
+{
+  
+  #initaially put 0 in all columns made from cuisines
+  new_cen[i,c(3:109)]=0
+  
+  #spliting the cuisine and put where it matches the colname
+   x=cen$Cuisines[i]
+   x=as.vector(x)
+   x=strsplit(x,",")
+   x=unlist(x)
+   x<- gsub("\\[|\\]", "", x)
+   x<- gsub("\\'|\\'", "", x)
+   x<- gsub(" ","",x)  
+   
+   for(j in 1:length(x))
+   { new_cen[i,x[j]]=1  
+   }  
+}
+
+
+high_weighted_columns=c(colnames(attribute_3)[3:109],"Smoking","Alcohol")
+
+###################### replace yes no entries of centroids ##################
+for(i in c("parking","RestaurantsDelivery","RestaurantsReservations","OutdoorSeating","WiFi","RestaurantsTakeOut","RestaurantsTableService",
+           "BikeParking","HasTV","WheelchairAccessible","HappyHour","DriveThru","DogsAllowed","BusinessAcceptsCreditCards"))
+{
+new_cen[,i][new_cen[,i] == "No"] <- 0
+new_cen[,i][new_cen[,i] == "Yes"] <- 1
+}
+new_cen$Smoking[new_cen$Smoking == "No"] <- 0
+new_cen$Smoking[new_cen$Smoking == "Outdoor"] <- 1
+
+new_cen$Alcohol[new_cen$Alcohol == "full_bar"] <- 1
+new_cen$Alcohol[new_cen$Alcohol == "beer_and_wine"] <- 1
+new_cen$Alcohol[new_cen$Alcohol == "No"] <- 0
+
+#write.csv(new_cen,"C:/Users/dell/Documents/new_cen.csv",row.names=FALSE)
+
+########################### predict cluster with min distance ##############################
+closest.cluster <- function(x) {
+  cluster.dist <- apply(new_cen_m, 1, function(y) sqrt(sum((x-y)^2)))
+  return(which.min(cluster.dist)[1])
+}
+clusters2 <- apply(new_user_m, 1, closest.cluster)
+  
+  
+  
+  
+  
+  
+  
+w=new_user[,1]
+q=cbind(w,cluster2)
+
+write.csv(w,"D:/rachana maam/find the new cluster for user/new_users_clusters.csv",row.names=FALSE)

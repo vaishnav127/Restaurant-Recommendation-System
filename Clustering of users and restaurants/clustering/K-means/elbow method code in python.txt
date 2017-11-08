@@ -1,0 +1,40 @@
+from scipy.spatial.distance import cdist, pdist
+from sklearn.cluster import KMeans
+import pandas as pd
+from scipy import cluster
+from sklearn.cluster import KMeans
+import matplotlib.pyplot as plt
+import numpy as np
+print("1")
+url="C:/Users/dell/Downloads/kmodes_numerical.csv"
+dt_trans=pd.read_csv(url)
+
+print("2")
+K = range(1,15)
+KM = [KMeans(n_clusters=k).fit(dt_trans) for k in K]
+centroids = [k.cluster_centers_ for k in KM]
+print("3")
+D_k = [cdist(dt_trans, cent, 'euclidean') for cent in centroids]
+cIdx = [np.argmin(D,axis=1) for D in D_k]
+dist = [np.min(D,axis=1) for D in D_k]
+avgWithinSS = [sum(d)/dt_trans.shape[0] for d in dist]
+print("4")
+# Total with-in sum of square
+wcss = [sum(d**2) for d in dist]
+tss = sum(pdist(dt_trans)**2)/dt_trans.shape[0]
+bss = tss-wcss
+
+kIdx = 10-1
+print("5")
+# elbow curve
+fig = plt.figure()
+ax = fig.add_subplot(111)
+ax.plot(K, avgWithinSS, 'b*-')
+ax.plot(K[kIdx], avgWithinSS[kIdx], marker='o', markersize=12, 
+markeredgewidth=2, markeredgecolor='r', markerfacecolor='None')
+plt.grid(True)
+plt.xlabel('Number of clusters')
+plt.ylabel('Average within-cluster sum of squares')
+plt.title('Elbow for KMeans clustering')
+print("6")
+plt.show()

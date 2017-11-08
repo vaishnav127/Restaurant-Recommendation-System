@@ -1,0 +1,29 @@
+.......  Alcohol',=char##   full_bar, beer_and_wine,No
+....... 'Parking',=char
+....... 'Smoking',=char##   Outdoor,No
+....... 'Delivery',char
+....... 'Reservation',char
+....... 'Outdoors',char
+....... 'Wi-Fi',char
+....... 'Take Out',char
+....... 'Service',(table service)char
+....... 'Bike Parking',char
+....... 'TV',char
+....... 'Accessible'(wheelchair),char
+....... 'Happy Hours',char
+....... 'Drive thru',=char 
+....... 'Allowed',(dogs)=char
+....... 'Pay by card',char
+.......  Cuisines : Sure Cuisines(list)
+
+'Good to Work',??
+'Pool',??
+
+
+#cusinies:
+['Deli', 'American', 'Bar']
+
+#cuisine ko break krke:
+Salvadoran	Wine Bar	Arabian	Latin American, Spanish	American, Belgian	Argentine	Belgian	Teppanyaki	Dim Sum	French	Hot pot	Cantonese	Bar	Dominican	Filipino	Canadian	Bakery	Ice Cream	Italian	Mediterranean	Moroccan	Desserts	Nepalese	Polish	Tex-Mex	Austrian	Caribbean	Pasta Shop	Champagne Bar	Indonesian	Salad Bar	Hawaiian	Iberian	Slovakian	Whiskey Bar	Thai	European	Cuban	Uzbek	Soups	Scottish	Tiki Bar	Greek	Burmese	Steakhouse	African	Beer Bar	Singaporean	Kebab	Burgers	Asian Fusion	Ethiopian	Shanghaniese	Cafe	Sushi Bar	Turkish	Middle Eastern	Bangladeshi	Lounge	Indian	Latin American	Brazilian	Korean	Hookah Bar	Barbeque	Russian	Afghan	Malaysian	Kosher	American	Thai Vietnamese	Irish	Chinese	German	Taiwanese	Czech	Persian	Mongolian	Basque	Vietnamese	Donuts	Waffles	Sports Bar	Tapas Bar	Fast Food	Australian	Venezuelan	Pizza	Ukranian	Egyptian	Deli	Tuscan	Lebanese	Diner	Seafood	Food truck	British	Portuguese	Columbian	Mexican	Peruvian	Japanese	Juice Bar	Cambodian	Hot Dogs	Spanish	Nicaraguan
+d=read.csv(choose.files())#attribute3 wali files
+cuisine_breaked=colnames(d)[2:107]

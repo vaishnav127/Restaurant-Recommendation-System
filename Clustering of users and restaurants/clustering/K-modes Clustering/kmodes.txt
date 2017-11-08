@@ -1,0 +1,28 @@
+install.packages("klaR")
+library(klaR)
+###### k-modes ######
+library(klaR)
+z=read.csv("C:/Users/dell/Downloads/kmodes_data.csv")
+k.max <- 15 ###chnage this to 8 and 10 also
+wss <- sapply(1:k.max, 
+              function(k){sum(kmodes(z[1:3000,], k, iter.max = 15, weighted = FALSE )$withindiff)})
+			  
+plot(1:k.max, wss,
+     type="b", pch = 19, frame = FALSE, 
+     xlab="Number_of_clusters K",
+     ylab="Total within-clusters sum of squares")
+
+
+#now by looing at the above plot, we will select the correct value of k(no of clusters) and then we will run the following code,where the clusters of the selected size are being formed. 
+
+	 
+kc=kmodes(z[1:3000,], 8, iter.max = 15, weighted = FALSE )
+#kc$cluster gives the clustering vector which indicates to which cluster a user belongs 
+
+f=kc$cluster 	
+
+result=cbind(mydata$user_id[1:3000],f)
+colnames(result)=c("user_id","cluster_no")
+
+write.csv(result, "C:/Users/dell/Downloads/result.csv", row.names = FALSE)
+ 

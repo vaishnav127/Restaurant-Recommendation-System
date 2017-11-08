@@ -1,0 +1,21 @@
+install.packages("factoextra")
+library(cluster)
+library(factoextra)
+d=read.csv("C:/Users/dell/Downloads/final_for_mean_shift.csv")
+clarax <- clara(d, 12)#for k=8 apply clara clustering model
+
+fviz_cluster(clarax, stand = FALSE, geom = "point",
+             pointsize = 1)
+fviz_silhouette(clarax)#width
+ 
+clarsax$medoids #it gives the centroids
+clarax$clustering#it gives the cluster no to each point
+
+
+#######calculate dunn index##########
+install.packages("clValid")
+library("clValid")
+Dist <- dist(x,method="euclidean")
+dunn(Dist, clarax$clustering)
+			 
+			

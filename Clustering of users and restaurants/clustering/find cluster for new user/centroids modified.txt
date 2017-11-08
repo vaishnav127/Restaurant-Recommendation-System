@@ -1,0 +1,49 @@
+rm(list = ls(all=TRUE))
+cen=read.csv(choose.files())#centroid wali file
+centroids=cen[,c("BusinessAcceptsCreditCards","BikeParking","Smoking","Alcohol","parking","RestaurantsDelivery","RestaurantsReservations",
+               "OutdoorSeating","DogsAllowed","HasTV","WiFi","RestaurantsTakeOut","RestaurantsTableService","WheelchairAccessible","HappyHour",
+               "DriveThru","Cuisines")]
+for(i in 1:nrow(centroids))
+{  x=centroids$Cuisines[i]
+   x=as.vector(x)
+   x=strsplit(x,",")
+   x=unlist(x)
+   x<- gsub("\\[|\\]", "", x)
+   x<- gsub("\\'|\\'", "", x)
+   x<- gsub(" ","",x)
+   for(j in 1:length(x))
+   {if(!is.element(as.character(x[j]),colnames(centroids)))
+    {  columnMatrix=NULL
+	   columnMatrix <- data.frame(matrix(ncol=1,nrow=nrow(centroids)))
+	   colnames(columnMatrix)=as.character(x[j])
+	   columnMatrix[i,]=1
+	   columnMatrix[-i,]=0
+	   centroids <- cbind(centroids,columnMatrix)
+    }
+	else
+	    {	
+		   centroids[i,x[j]]=1
+        } 
+   }
+}
+###################### replace yes no entries##################
+for(i in c("parking","RestaurantsDelivery","RestaurantsReservations","OutdoorSeating","WiFi","RestaurantsTakeOut","RestaurantsTableService",
+           "BikeParking","HasTV","WheelchairAccessible","HappyHour","DriveThru","DogsAllowed","BusinessAcceptsCreditCards"))
+{
+centroids[,i][centroids[,i] == "No"] <- 0
+centroids$[,i][centroids$[,i] == "Yes"] <- 1
+}
+centroids$Smoking[centroids$Smoking == "No"] <- 0
+centroids$Smoking[centroids$Smoking == "Outdoor"] <- 1
+
+centroids$Alcohol[centroids$Alcohol == "full_bar"] <- 1
+centroids$Alcohol[centroids$Alcohol == "beer_and_wine"] <- 1
+centroids$Alcohol[centroids$Alcohol == "No"] <- 0
+
+write.csv(centroids, "C:/Users/dell/Documents/centroids_modified.csv", row.names = FALSE)
+
+######################## drop cuisuine column #####################
+g="Cuisines"
+centroids <- centroids[, ! names(centroids) %in% g, drop = F]
+
+write.csv(centroids, "C:/Users/dell/Documents/final_centroids.csv", row.names = FALSE)

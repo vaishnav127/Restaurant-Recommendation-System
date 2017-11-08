@@ -1,0 +1,39 @@
+##df_1 prefernces wali hai
+##centroids ,centroid wali hai
+
+v=special_columns[,1]
+for(i in 1:nrow(df_1))
+{
+  for(j in 1:nrow(centroids))
+   {
+    w=0
+    sum=0
+    for(k in colnames(centroids)) 
+     {
+      sum=sum+(df_1[i,k]-centroids[j,k])^2
+     }
+    w=sqrt(sum)
+    distance[j]=w
+    }
+s=which(distance == min(distance))
+if(length(s)==1)
+{
+cluster_number[i]=s
+}
+else
+{
+    for(z in 1:nrow(centroids))
+     {
+       sum_special=0
+       for(j in 1:nrow(v))
+        {
+           sum_special=special_columns+(df_1[i,v[j,1]]-centroids[i,v[j,1]])^2
+        }
+       w_special=sqrt(sum_special)
+       distance_special[z]=w_special
+     }
+	 s_special=which.min(distance_special)
+	 cluster_number[i]=s_special
+}
+}
+

@@ -1,0 +1,20 @@
+from scipy.spatial.distance import cdist, pdist
+from sklearn.cluster import KMeans
+import pandas as pd
+from scipy import cluster
+from sklearn.cluster import KMeans
+import matplotlib.pyplot as plt
+import numpy as np
+
+print("1")
+url="C:/Users/dell/Downloads/kmeans_numerical.csv"
+dataset=pd.read_csv(url)
+dataset= dataset[dataset.columns[2:]]
+
+##change no of clusters to 8 15 also
+kmeans=KMeans(n_clusters=10, random_state=0).fit(dataset)
+a= kmeans.labels_
+solution=pd.DataFrame(a)
+solution.to_csv("C:/Users/dell/Desktop/cluster.csv",index=False)
+
+
