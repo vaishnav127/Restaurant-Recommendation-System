@@ -1,0 +1,3 @@
+Here,the predictions of user to user algorithm and item to item algorithm were combined by using control factor a.
+
+P(u,i) =a*P(user to user)(u,i)+ (1-a)*P(item to item)(u,i)
