@@ -1,0 +1,20 @@
+﻿# insights for plot for ratings of various caribbean restaurants in newyork:-
+
+there are 75 caribbean restaurants in newyork
+
+there are 6 caribbean restaurants in newyork which are having max ratings(5):
+"Caribbean Dutchpot"
+"Faithyï¿½ï¿½s Kitchen"
+"Tony''s Pizza'"  
+"Caribbean Kitchen"
+"El Patio Dominicano" 
+"Motta Cuisine"
+
+There are 6 caribbean restaurants in newyork which are having ratings(4.5):
+"7 Spices Carribean Restaurant"   
+"Lammyï¿½ï¿½s"
+"Restaurante Lechonera & Pollo Sabroso" 
+"Pitkin Caribbean Bakery" 
+"Hot Pot Under De Tree"                 
+"Yerba Buena"  
+likewise we can find good rating restaurants for a particular food in a particular city

@@ -1,0 +1,8 @@
+1)The restaurants having japanese_food mostly have price between $11-30 or under $10.very few of the are really pricey 
+
+2)The same is the case with irish food and thai food restaurants.
+
+3)most of the restaurants having sports_bar availability are not expensive.Most of then have price between $11-30 
+
+
+avg_rating of restaurants having sports_bar=3.267559

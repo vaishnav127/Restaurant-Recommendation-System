@@ -1,0 +1,10 @@
+1)Most of the business are food business=8272
+2)Then comes Nightlife with 4625 business
+3)least no of business are of Pakistani food=77
+4)QuikTrip has the most no of business with high ratings (stars>4) =50 business
+  a)It is then followed by starbucks,subway,Ups_stores with 25,20,18 business respectively with stars>4
+5)Starbucks has the most no of business with moderate ratings (stars=3-4 )=254 business
+  a)It is then followed by subway,Walgreens,Taco Bell, McDonald's with 164,91,77,72 business respectively with stars=3-4
+6)McDonald's has the most no of business with low ratings (stars<3 )=254 business
+  a)It is then followed by subway,Pizza_hut,Wendy's,Burger King,KFC  with 138,116,106,105,87  business respectively with stars<3  
+  

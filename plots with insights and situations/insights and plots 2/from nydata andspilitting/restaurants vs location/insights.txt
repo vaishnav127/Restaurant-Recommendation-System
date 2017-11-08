@@ -1,0 +1,43 @@
+1)Total 9 cities are there which have african food available
+  a)Brooklyn and New York have maximum african restaurants having   14 each 
+  b)Bronx=10
+  c)other 6 cities have 1 each
+  
+2)Total 17 cities are there which have hookahbars available
+  a)New York have maximum restaurants with hookahbars=27  
+  b)Brooklyn=18
+  c)Astoria=17
+  d)Staten Island=5
+  e)Bronx=3
+  f)Forest Hills =2
+  e)other 11 cities have 1 each
+  
+3)japanese food restaurants are mostly in New York,Brooklyn,Flushing,Staten Island,Bronx,Astoria 
+  a)New York =549 
+  b)Brooklyn=155
+  c)Flushing=42
+  d)Staten Island=34
+  e)Bronx=21
+  f)Astoria=20
+  g)Forest Hills=17
+  h)Manhattan=11
+  i)Great Neck=10
+  
+4)SriLankan food restaurants are only in Staten Island having only 2 restaurants where this food is available 
+  
+5)SouthAfrican food restaurants are only in New York having only 2 restaurants where this food is available
+
+6)Restaurants having beaches is only in Long Island City with only 1 restaurant
+
+7)SCottish food restaurants are only in NewYork having only 1 restaurants where this food is available
+
+8)Total 19 cities are there which have german food available
+  a)NewYork=26
+  b)Brooklyn=10
+  c)Glendale & Ridgewood have 4 each
+  d)Staten Island=3
+  e)Forest Hills=2
+  f)other cities have 1 each
+ 
+  
+

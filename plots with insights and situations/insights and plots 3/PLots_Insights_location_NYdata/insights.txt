@@ -1,0 +1,8 @@
+1. There are total 270 neighbourhoods.
+2. Maximum no. of restaurants are in midtown(4011)(13.31%), lower manhattan(3884)(12.88%), Flushing(2092)(6.94%), Long Island City (852)(2.83%)
+3.There are total 5 sublocalities.
+4. The distribution of restaurants in decreasing order per sublocality are- manhattan(12380)(41.07%), brooklyn(6589)(21.86%).
+5.There are 2 political divisions.
+6.The distribution of restaurants in decreasing order per political divisions are- United States(30132)(99.96%), New York(12)(0.04%)
+7.There are total 2589 routes.
+8.Maximum no. of restaurants are on Broadway(995)(3.30%), 3rd avenue(655)(2.17%), 5th avenue(549)(1.82%).

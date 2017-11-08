@@ -1,0 +1,13 @@
+bike_parking VS pricing - 1) 75% of the restaurants have bike parkings
+                          2) Percentage of bike parking is less for high priced restauarnts than the moderately and low priced restaurants.
+bike_parking VS restaurants - 1) 75% of restaurants with higher ratings have bike parking
+
+delivery VS pricing- 1) All the pricey and high end restaurants have delivery services
+                     2) Very less low and moderately priced restaurants have delivery services. 
+delivery vs ratings - 1)There is no trend in ratings and delivery services.
+                      2) customers like both equally.
+reservation VS pricing- 1) More than 80% restaurants do not take reservations.
+                        2) There is no other trend.
+reservation VS ratings - 1) The restaurants which take reservations have medium ratings.
+                         2) while the restaurants which do not take reseervations have either very low or very high ratings.
+                          (For higher rated restaurants, may be reservation has no effect)

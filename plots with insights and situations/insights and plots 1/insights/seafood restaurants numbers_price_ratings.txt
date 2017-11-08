@@ -1,0 +1,164 @@
+﻿# seafood vs prices of restaurants
+0 inexpensive restaurants has seafood (0%)
+2277 inexpensive restaurants does not have seafood(100%)
+
+61 Under $10 restaurants has seafood(0.73%
+8237 Under $10 restaurants does not have seafood(99.5%)
+
+425 $11-30 restaurants has seafood(3.74%)
+10931 $11-30 restaurants does not have seafood(96.25%)
+
+0 Moderate restaurants has seafood(0%)
+2244 Moderate restaurants does not have seafood(100%)
+
+0 Pricey restaurants has seafood(0%)
+191 Pricey restaurants does not havw seafood(100%)
+
+0 ultra high end restaurants has seafood(0%)
+65 ultra high end restaurants does not havw seafood(100%)
+
+166 $31-60 restaurants has seafood(11.0%)
+1342 $31-60 restaurants does not havw seafood(89%)
+
+
+
+# seafood vs ratings
+1 restaurants of 1 ratings  have seafood(0.16%) 
+596 restaurants of 1 ratings dont have seafood(99.9%)
+
+0 restaurants of 1.5 ratings  have seafood (0%)
+444 restaurants of 1.5 ratings dont have seafood(100%)
+
+10 restaurants of 2 ratings have seafood (0.81%)
+1216 restaurants of 2 ratings dont have seafood(99.2%)
+
+49 restaurants of2.5 ratings  have seafood (2.13%)
+2251 restaurants of 2.5 ratings dont have seafood(97.9%)
+
+120 restaurants of 3 ratings have seafood(2.41%) 
+4853 restaurants of 3 ratings dont have seafood(97.5%)
+
+220 restaurants of 3.5 ratings  have seafood (2.98%)
+7142 restaurants of 3.5 ratings dont have seafood(97%)
+
+239 restaurants of 4 ratings  have seafood(2.93%) 
+7902 restaurants of 4 ratings dont have seafood(97%)
+
+60 restaurants of 4.5 ratings  have seafood (1.83%)
+3216 restaurants of 4.5 ratings dont have seafood(98.17%)
+
+22 restaurants of 5 ratings  have seafood (1.20%)
+1803 restaurants of 5 ratings dont have seafood(98.7%)
+
+
+
+
+# average ratings of fast food
+2.792727
+
+# average ratings of chinese
+3.361087
+
+# average ratings of chicken wings
+2.82598
+ 
+# average ratings of chicken shop
+3.469388
+ 
+# average ratings of thai
+3.487524
+ 
+# average ratings of seafood
+3.619279
+ 
+# average ratings of sandwiches
+3.374069
+
+# average ratings of spanish
+3.546377
+
+# average ratings of african
+ 3.931818
+
+
+# average ratings of south african
+3.5
+
+# average ratings of japanese
+3.580944
+
+# average ratings of bangladeshi
+3.530612
+
+
+
+# insight for plot for the no of restaurants in cities where seafood is available
+t0tal 135 cities are there where seafood restaurants are available
+seafood is mostly available in these 4 cities:-
+Newyork  =264 
+Brooklyn  118
+Flushing   30
+Bronx   29
+
+# insight for plot for the no of restaurants in cities where spanish is available
+t0tal 54 cities are there where spanish restaurants are available
+spanish is mostly available in these 3 cities:-
+Newyork 118  
+Bronx   52
+Brooklyn   60
+
+
+# insight for plot for the no of restaurants in cities where mexican is available
+t0tal 151 cities are there where mexican restaurants are available
+mexican is mostly available in these 5 cities:-
+in Newyork max no of mexican = 554  restaurants are there
+Brooklyn  349
+Bronx   97
+Astoria   43
+Jackson Heights   38
+
+
+# insight for plot for the no of restaurants in cities where caribbean is available
+t0tal 51 cities are there where caribbean restaurants are available
+caribbean is mostly available in these 4 cities:-
+Brooklyn  140  
+newyork  75
+bronx  43
+Jamaica   27
+
+# insight for plot for the no of restaurants in cities where thai is available
+t0tal 75 cities are there where thai restaurants are available
+thai food is mostly available in these 4 cities:-
+newyork 248 
+Brooklyn   90
+Elmhurst   16
+Astoria   15
+
+
+# insight for plot for the no of restaurants in cities where chinese is available
+t0tal 128 cities are there where chinese restaurants are available
+chinese food is mostly available in these 5 cities:-
+newyork  649 
+Brooklyn  509
+Flushing  236
+Bronx  148
+Staten Island   72
+
+
+# insights for plot for ratings  for various restaurants of caribbean in newyork
+there are 75 caribbean restaurants in newyork
+there are 6 caribbean restaurants which are having max ratings(5):
+"Caribbean Dutchpot"
+"Faithyï¿½ï¿½s Kitchen"
+"Tony''s Pizza'"  
+"Caribbean Kitchen"
+"El Patio Dominicano" 
+"Motta Cuisine"
+there are 6 caribbean restaurants which are having max ratings(4.5):
+"7 Spices Carribean Restaurant"   
+"Lammyï¿½ï¿½s"
+"Restaurante Lechonera & Pollo Sabroso" 
+"Pitkin Caribbean Bakery" 
+"Hot Pot Under De Tree"                 
+"Yerba Buena"  
+likewise we can find good rating restaurant for a particular food in a particular city

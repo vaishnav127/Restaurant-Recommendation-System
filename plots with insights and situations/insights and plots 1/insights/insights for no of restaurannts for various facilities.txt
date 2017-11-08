@@ -1,0 +1,119 @@
+Rplot06;
+no of restaurants that Not allowed dogs   - 2674 (8.6 %)
+no of restaurants that allowed dogs  - 277(0.8 %)
+more no of restaurants dont allowed dogs
+
+
+
+Rplot07;
+no of restaurants that Not has TV   - 9685(31.44%)
+no of restaurants that has TV  - 6522(21.1)
+more no of restaurants dont has tv
+
+
+
+Rplot08;
+no of restaurants that Not has wifi   - 10508(34.1%)
+no of restaurants that has wifi for free  - 5581(18.1%)
+no of restaurants that Not has wifi for paid  - 115(0.37%)
+
+
+
+Rplot09;
+no of restaurants that Not has alcohol   - 7744  (25.14%)
+no of restaurants that has beer and wine only -  3097 (10%)
+no of restaurants that Not has full bar  - 4862 (15%)
+ 
+ 
+ 
+ 
+ Rplot10;
+no of restaurants that has quiet noise level  - 737 (2.3%)  
+no of restaurants that has very loud noise level-  457 (1.48%)
+no of restaurants that has average noise level-  10642 (34.5%)
+
+no of reataurants that has loud noise level -1164(3.77%)
+
+most of restaurants has average level of noise
+
+
+Rplot11;
+no of restaurants that doesn't allowed for smoking - 1442  (4.6%) 
+no of restaurants that has smoking for Outdoor Area/ Patio Only-  351 (1.1%)
+
+
+
+Rplot12;
+no of restaurants that has waiter service - 8814  (28.6%)
+no of restaurants that doesn't have waiter service-  6804 (22%)
+
+
+
+
+Rplot13;
+no of restaurants that has wheel chair service -  9286 (31%)
+no of restaurants that doesn't have wheel chair service-  2513 (8.15%) 
+
+
+
+Rplot14;
+no of restaurants that has pool table -  77(0.25%)
+no of restaurants that doesn't have pool table-  1367 (4.438%)
+
+
+
+Rplot15;
+no of restaurants that has DJ -  232(0.75%)
+no of restaurants that has DJ, Live, Juke Box, Background, Karaoke"-  3(0.009 %)
+no of restaurants that has Live music -  116(0.37%)
+no of restaurants that has Background music -  605 (1.96%)
+no of restaurants that has Juke Box  -  117(0.37%)
+
+
+
+Rplot16;
+no of restaurants that takes reservation -  5949(19%)
+no of restaurants that doesn't takes reservation- 11802(38.32%)
+
+many no of restaurants dont take reservations
+
+Rplot17;
+no of restaurants that allowed parking in street -  12156(39.4%)
+no of restaurants that has private lot for parking-  971(3.15%)
+no of restaurants that has valet,street for parking -  85(0.27%)
+no of restaurants that has garage for parking -  388(1.25%)
+ 
+ 
+Rplot20;
+
+84% of $10 price restaurants are good for kids
+9% of $ 10 price restaurants are bad for kids
+72% of $11-30 price restaurants are good for kids
+24% of $11-30 price restaurants are bad for kids
+0.4% all inexpensive restaurants are good for kids 
+0.2% all inexpensive restaurants are bad for kids
+0.5% all moderate price restaurants are bad for kids
+0.3% all moderate price restaurants are good for kids
+all pricey restaurants are bad for kids as according to graphs
+
+
+Rplot21;
+55% of $10 price restaurants are good for groups
+37% of $ 10 price restaurants are bad for groups
+81% of $11-30 price restaurants are good for kids
+15% of $11-30 price restaurants are bad for kids
+0.6% all inexpensive restaurants are good for kids 
+0.09% all inexpensive restaurants are bad for kids
+0.23% all moderate price restaurants are bad for kids
+1.3% all moderate price restaurants are good for kids
+all pricey restaurants are bad for groups as according to graphs
+
+Rplot21;
+0.11% of restaurants not accepts credit cards
+71% of restaurants accepts credit cards
+28% of restaurants not accepts Apple pay
+5.4% of restaurants  accepts Apple pay
+6.3% of restaurants not accepts Android pay
+1.16% of restaurants  accepts Android pay
+6.82% of restaurants not accepts Bitcoin
+0.07% of restaurants accepts credit Bitcoin

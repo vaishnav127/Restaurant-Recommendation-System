@@ -1,0 +1,53 @@
+# insight for plot for the no of restaurants in cities where seafood is available
+t0tal 135 cities are there where seafood restaurants are available
+seafood is mostly available in these 4 cities:-
+Newyork  =264 
+Brooklyn  118
+Flushing   30
+Bronx   29
+
+# insight for plot for the no of restaurants in cities where spanish is available
+t0tal 54 cities are there where spanish restaurants are available
+spanish is mostly available in these 3 cities:-
+Newyork 118  
+Bronx   52
+Brooklyn   60
+
+
+# insight for plot for the no of restaurants in cities where mexican is available
+t0tal 151 cities are there where mexican restaurants are available
+mexican is mostly available in these 5 cities:-
+in Newyork max no of mexican = 554  restaurants are there
+Brooklyn  349
+Bronx   97
+Astoria   43
+Jackson Heights   38
+
+
+# insight for plot for the no of restaurants in cities where caribbean is available
+t0tal 51 cities are there where caribbean restaurants are available
+caribbean is mostly available in these 4 cities:-
+Brooklyn  140  
+newyork  75
+bronx  43
+Jamaica   27
+
+# insight for plot for the no of restaurants in cities where thai is available
+t0tal 75 cities are there where thai restaurants are available
+thai food is mostly available in these 4 cities:-
+newyork 248 
+Brooklyn   90
+Elmhurst   16
+Astoria   15
+
+
+# insight for plot for the no of restaurants in cities where chinese is available
+t0tal 128 cities are there where chinese restaurants are available
+chinese food is mostly available in these 5 cities:-
+newyork  649 
+Brooklyn  509
+Flushing  236
+Bronx  148
+Staten Island   72
+
+

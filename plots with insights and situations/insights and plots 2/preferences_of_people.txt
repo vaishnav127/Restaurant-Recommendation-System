@@ -1,0 +1,15 @@
+1)Formal meetings: WiFi+ BusinessAcceptsCreditCards+ latitude+longitude+bike_parking+hours+is_open+stars.y
+
+
+2)Family doing for dinner(have small kids) :GoodForKids+attributes+ categories+latitude+longitude+hours+ambience+is_open+stars.y
+
+3)Guys going for drinks:BikeParking+Alcohol  :Full_bar+stars.y+attributes+hours+is_open
+
+4)aged people :ambience+latitude+longitude+stars.y+hours+is_open
+
+5)parties organised by college buddies:  ByAppointmentOnly+BikeParking+BusinessAcceptsCreditCards+Alcohol:Full_bar+stars.y+attributes+categories+hours+is_open
+
+6)health consicous people:stars.y+categories+hours+is_open
+
+
+

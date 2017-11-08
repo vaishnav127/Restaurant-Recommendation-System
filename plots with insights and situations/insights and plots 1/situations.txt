@@ -1,0 +1,44 @@
+1>where would family like to go for family dinner...
+
+-stars.y
+-categories
+-longitude,latitude
+-hours
+-ambience
+-attribures$noiselevel
+2>situation in which family wants to order food at home
+
+-restaurant_delivery
+-stars.y
+-longitude,latitude
+-is_open
+3> girls group party on weekends
+
+-ambience(casual,trendy)
+-latitude,longitude
+-stars.y
+-is_open on weekends
+-hours
+-bike_parking
+-neighbourhood
+-attributes$RestaurantsGoodForGroups
+4>boys group going for a party in night(they would like to have dinner then alcohol)
+
+-categories having alcohol
+-categories
+-is_open in late night
+-hours
+-longitude,latitude
+-bike_parking
+-attributes$RestaurantsGoodForGroups
+
+5>to organize a family function
+-by_appointment
+-BusinessAcceptsCreditCards
+-bike_parking
+-stars.y
+-longitude,latitude
+-good for kids
+-hours
+-is_open
+-categories

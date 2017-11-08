@@ -1,0 +1,47 @@
+1. Restaurants for business meetings- 
+   -BusinessAcceptsCreditCards
+   -BusinessAcceptsBitcoin
+   -Alcohol:Full_bar
+   -elite
+   -WiFi
+   -ByAppointment
+   -Ambience
+   -neighbourhood
+   -stars.y
+
+2. Restaurants for an artist (there are many writers, musicians etc. who sit in restaurants all the day and work on their projects)-
+   -Alcohol:Full_bar
+   -bike parking
+   -Ambience
+ 
+3. couples/newly married
+   -neighbourhood
+   -ambience
+   -ByAppointment
+   -stars.y
+
+4. birthday parties_school students
+   -GoodForKids
+   -cool.y
+   -BikeParking
+   -stars.y
+   -review_count.y
+
+5. college parties
+   -hours
+   -stars.y
+   -Alcohol:Full_bar
+   -Ambience
+   -Wifi
+
+6. Family dinner
+   -neighbourhood
+   -review_count.y
+   -stars.y
+   -ambience
+
+7. People living alone
+   -stars.y
+   -RestaurantsDelivery
+   -latitude
+   -longitude

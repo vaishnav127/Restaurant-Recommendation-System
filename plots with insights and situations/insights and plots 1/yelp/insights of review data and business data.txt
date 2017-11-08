@@ -1,0 +1,25 @@
+1>22655 no of useful votes to reviews of businesses
+
+2>8720 no of funny votes to reviews of businesses
+
+3>10702 no of cool votes to reviews of businesses
+
+4>"Mon Ami Gabi" has max review count 5642
+
+5>
+there are 5 cities which has maximum no of businesses that are restaurants
+Las Vegas has maximum no of restaurants businesses 4591
+Charlotte -1872
+Edinburgh -1191
+Phoenix -2903
+Scottsdale -1165
+
+6>las vegas has maximum no of pizza business
+
+7> las vegas has maximum no of vagetarian restaurants-40
+ Phoenix -  34
+8>las vega also has maximum no of non vagetarian restaurants-17297
+ Phoenix 10572
+9>8572 businesses has free wifi service means(11.7% has free wifi)
+
+10>10724 businesses has no wifi services means(14.74% has no  wifi)

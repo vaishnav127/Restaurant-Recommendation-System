@@ -1,0 +1,40 @@
+Newyork has 112 users
+Manhattan, NY has   60 users
+Brooklyn, NY has  85 users
+Queens, NY   13
+Jersey City, NJ   13
+Buffalo, NY   10
+
+54 users has given 9 useful reviews(max no of useful reviews till now)
+42 users has given 9 funny reviews(max no of funny reviews till now)
+37 users has given 9 cool reviews(max no of cool reviews till now)
+
+London, United Kingdom user has given max no of compliments-49636
+Oyster Bay, NY has max no of review count 2205
+
+
+total no of useful reviews by Newyork user's 2668
+total no of useful reviews by Manhattan, NY users has   287
+total no of useful reviews by Brooklyn, NY users has  355 users
+total no of useful reviews by Queens, NY  users  52
+total no of useful reviews by Jersey City, NJ  users 45
+total no of useful reviews by Buffalo, NY users  37
+
+ 
+ total no of useful reviews by Newyork user's 2668
+total no of useful reviews by Manhattan, NY users   188
+total no of useful reviews by Brooklyn, NY users 288 
+total no of useful reviews by Queens, NY  users  51
+total no of useful reviews by Jersey City, NJ  users 52
+total no of useful reviews by Buffalo, NY users  40
+
+ 
+  total no of useful reviews by Newyork user's 2668
+total no of useful reviews by Manhattan, NY users  213
+total no of useful reviews by Brooklyn, NY users 262
+total no of useful reviews by Queens, NY  users  44
+total no of useful reviews by Jersey City, NJ  users 52
+total no of useful reviews by Buffalo, NY users  39
+
+ 
+ 

@@ -1,0 +1,6 @@
+1)More no of restaurants are located in   Newyork,brooklyn,bronx,manhattan,astoria,ridgewood.
+
+2)More no of pricey_restaurants are located in   Newyork,brooklyn,bronx,manhattan,astoria,ridgewood.
+
+3)In general,the locations having more no of restaurants have more 
+no of pricey restaurants,more no of moderately restaurants,more no of inexpensive restaurants
