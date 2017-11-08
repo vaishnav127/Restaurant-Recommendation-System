@@ -1,0 +1,14 @@
+r=read.csv(choose.files())#original merged file
+d=read.csv(choose.files())#file which is to be re-normalised
+z=c("review_count" ,"ratings","distance","pricelevel","average_hours","stars")
+for(i in 1:length(z))
+{
+  min=min(r[,z[i]],na.rm=TRUE)
+  max=max(r[,z[i]],na.rm=TRUE)
+  for(j in 1:nrow(d))
+  {if(!is.na(d[j,z[i]]))
+  {
+   d[j,z[i]]=(d[j,z[i]]*(max-min)+min
+   }
+  }
+}

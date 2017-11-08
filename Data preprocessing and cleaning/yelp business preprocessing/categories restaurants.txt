@@ -1,0 +1,107 @@
+big_data<-read.csv("G:/technical/python/rachana maam project/new data/yelp business/yelp_business.csv")
+big_data<- subset(big_data,big_data$is_open==1)	 
+
+sub_data <- data.frame(matrix(ncol=ncol(big_data),nrow=0))
+colnames(sub_data) <- colnames(big_data)
+ 
+for(i in 1:nrow(big_data))
+{
+print(i)
+my_list <- c("Food","Restarants","Fast Food","Bars","food","restarants","bars","fast food");
+cat <- big_data$categories[i]
+x<- gsub("u", "", cat)
+x<- strsplit(x,",")
+x<- unlist(x) 
+x<- gsub("\\[|\\]", "", x)
+x<- gsub("\\'|\\'", "", x)
+x<- gsub(" ","",x)
+
+a<- is.element(my_list,x)
+if(is.element(TRUE,a)) 
+{
+	 sub_data <- rbind(sub_data , big_data[i,])
+	 
+	 
+	 }
+	}
+
+
+write.csv(sub_data,"G:/technical/python/rachana maam project/new data/yelp business/Food_business.csv", row.names=FALSE)
+ncol(sub_data)	  
+
+
+# dividing categories
+big_data<-read.csv("G:/technical/python/rachana maam project/new data/yelp business/Food_business.csv")
+max=0
+for(i in 1:nrow(big_data))
+{
+print(i)
+cat <- big_data$MainCategory[i]
+x<- gsub("u", "", cat)
+x<- strsplit(x,",")
+x<- unlist(x) 
+x<- gsub("\\[|\\]", "", x)
+x<- gsub("\\'|\\'", "", x)
+x<- gsub(" ","",x)
+
+if(max < length(x))
+{
+max = length(x)
+}
+}
+# max is 9
+print(max)
+sub_data <- data.frame(matrix(ncol=max,nrow=0))
+colnames(sub_data) <- c("Categories1","Categories2","Categories3","Categories4","Categories5","Categories6","Categories7","Categories8",
+"Categories9")
+ 
+for(i in 1:nrow(big_data))
+{
+print(i)
+
+cat <- big_data$MainCategory[i]
+x<- gsub("u", "", cat)
+x<- strsplit(x,",")
+x<- unlist(x) 
+x<- gsub("\\[|\\]", "", x)
+x<- gsub("\\'|\\'", "", x)
+x<- gsub(" ","",x)
+
+len<- length(x)
+if(x[1]!="")
+{
+for(j in 1:len)
+{
+sub_data[i,j]<- x[j]
+}
+if(max!=len)
+{
+for(k in ((len+1):max))
+{
+sub_data[i,k]<- 0
+}
+}
+}
+
+if(x[1]=="")
+{
+for(p in 1:max)
+{
+sub_data[i,p]<- 0
+}
+}
+#print(paste0(ncol(sub_data),",",i))
+}
+
+
+write.csv(sub_data,"G:/technical/python/rachana maam project/new data/yelp business/MainCategory_divide.csv", row.names=FALSE)
+
+
+  
+y_data<-read.csv("G:/technical/python/rachana maam project/new data/yelp business/Food_business.csv")
+my_data<-read.csv("G:/technical/python/rachana maam project/new data/yelp business/MainCategory_divide.csv")
+a<- cbind(y_data[,c(3:4,11,14,15)],my_data)
+write.csv(a,"G:/technical/python/rachana maam project/new data/yelp business/combined_with_maincategory.csv", row.names=FALSE)
+
+
+

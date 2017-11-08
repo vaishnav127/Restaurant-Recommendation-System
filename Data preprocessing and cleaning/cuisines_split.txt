@@ -1,0 +1,37 @@
+#d=read.csv(choose.files())#unique business data to FC
+mydata= read.csv("G:/technical/python/rachana maam project/new data/python clustering/uniq_business_data_FC.csv")
+d =subset(mydata,(((mydata$stars.x+mydata$stars.y)>=6.5&(mydata$stars.x+mydata$stars.y)<=7)|(mydata$stars.x+mydata$stars.y)>8.5))
+centroids=data.frame(matrix(data=d$business_id,ncol=1,nrow=nrow(d)))
+#centroids=d[,c("business_id")]
+colnames(centroids)="business_id"
+for(i in 1:nrow(d))
+{print(i)  
+x=d$Cuisines[i]
+   x=as.vector(x)
+   x=strsplit(x,",")
+   x=unlist(x)
+   x<- gsub("\\[|\\]", "", x)
+   x<- gsub("\\'|\\'", "", x)
+   x<- gsub(" ","",x)
+  if(x[1]!="")
+  { for(j in 1:length(x))
+   {
+   if(!is.element(x[j],colnames(centroids)))
+    {  
+	   columnMatrix <- data.frame(matrix(ncol=1,nrow=nrow(centroids)))
+	   colnames(columnMatrix) <- x[j]
+	   columnMatrix[i,]=1
+	   columnMatrix[-i,]=0
+	   centroids <- cbind(centroids,columnMatrix)
+    }
+	else
+	    {	
+		   centroids[i,x[j]]=1
+        }
+   
+   }
+}   
+}
+write.csv(centroids,"G:/technical/python/rachana maam project/new data/python clustering/cuisine_split_8552.csv", row.names=FALSE)
+	  
+

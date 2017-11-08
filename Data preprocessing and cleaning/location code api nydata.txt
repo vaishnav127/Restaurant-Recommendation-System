@@ -1,0 +1,37 @@
+import pandas as pd
+import numpy as np
+import time
+import requests
+import json
+import os
+def getplace(lat, lon):
+	url = "http://maps.googleapis.com/maps/api/geocode/json?"
+	url += "latlng=%s,%s&sensor=false" % (lat, lon)
+	v = requests.get(url)
+	j = json.loads(v.content)
+	components = j['results'][0]['address_components']
+	country = town = neigh=street_no=route=political=sublocality= None
+	for c in components:
+		if "country" in c['types']:
+			country = c['long_name']
+		if "locality" in c['types']:
+			town = c['long_name']
+		if "neighborhood" in c['types']:
+			neigh = c['long_name']
+	#print town, country, neigh
+	return town, country, neigh
+#getplace(40.844162, -73.91465)
+data=pd.read_csv("G:/technical/python/newNYdata.csv")
+new_col = pd.DataFrame(columns=["city", "country", "neighbourhood"])
+for i in range(30143):
+	lat= data.loc[i, "businesses.location.coordinate.latitude"]
+	lon= data.loc[i, "businesses.location.coordinate.longitude"]
+	ls = getplace(lat, lon)
+	new_col = new_col.append({"city": ls[0],"country":ls[1], "neighbourhood": ls[2]}, ignore_index=True)
+	#new_col.to_csv('new_col.csv', mode='a', header=False)
+	print(i)
+        new_col.to_csv('G:/technical/python/rachana maam project/loc_NY2.csv')
+	time.sleep(0.2)
+	#print "end"
+#print new_col
+#new_col.to_csv('G:/technical/python/rachana maam project/loc_NY2.csv')

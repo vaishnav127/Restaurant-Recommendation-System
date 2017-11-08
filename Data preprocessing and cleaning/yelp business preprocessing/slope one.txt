@@ -1,0 +1,23 @@
+To drastically reduce overfitting, improve performance and ease implementation, the Slope One family of easily implemented Item-based Rating-Based collaborative filtering algorithms was proposed. 
+
+
+i will hve my rating matrix
+i will make sqaure matrix of items which wii have all avg difference from one item to other item retings...
+and another sqaue matrix of items contains no of usrs that has rated both th items cam be get at the time of making 1st square matrix
+
+
+now fro finding prediction of rating by one user to one item i will first add the row of that user of rting matrix with that row of first sqaure matrix that contain that item for which predictin is to be find and then multiply them by row of second sqauare matrix of that item and then add total and divide by sum of row of second square matrix
+
+
+(1+2)*1+(2+3)*2/1+2
+
+
+To reduce overfitting, improve performance and ease implementation, the Slope One family of easily implemented Item-based Rating-Based collaborative filtering algorithms was proposed.
+ 
+
+
+
+
+
+
+

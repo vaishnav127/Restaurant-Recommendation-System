@@ -1,0 +1,41 @@
+
+p<-read.csv("G:/technical/python/rachana maam project/new data/yelp business/postal_modified.csv")
+
+q<-read.csv("G:/technical/python/rachana maam project/new data/yelp business/unique postal code.csv")
+
+r<-read.csv("G:/technical/python/rachana maam project/new data/yelp business/lat lon unique_670.csv")
+new<-data.frame(matrix(nrow = nrow(p), ncol = 0))
+
+
+for(i in 1:nrow(p))
+{
+
+a<- p$postal code[i]
+new$lat_cent[i]<- subset(r$lat,q$postal code==a)
+new$lon_cent[i]<- subset(r$lon,q$postal code==a)
+
+
+}
+
+new$lat<- p$latitude
+new$lon<- p$longitude
+write.csv(new,"G:/technical/python/rachana maam project/new data/yelp business/lat lon centre all.csv", row.names=FALSE)
+
+distance<-data.frame(matrix(nrow = nrow(new), ncol = 0))
+library(geosphere)
+for(j in 1:nrow(new))
+{
+
+lat1<-new$lat[j]
+lon1<-new$lon[j]
+lat2<-new$lat_cent[j]
+lon2<-new$lon_cent[j]
+#distm (c(-115.1592718, 36.1922841), c(-79.429089, 43.661054), fun = distHaversine)
+distance$distance[j] = distm (c(lon1,lat1), c(lon2, lat2), fun = distHaversine)
+
+
+}
+
+write.csv(distance,"G:/technical/python/rachana maam project/new data/yelp business/correct distance.csv", row.names=FALSE)
+
+

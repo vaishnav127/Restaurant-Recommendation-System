@@ -1,0 +1,19 @@
+d=read.csv(choose.files())#attrbutes3_for_10k
+z=c("GoodForKids","ByAppointmentOnly","BusinessAcceptsCreditCards","pricelevel","BikeParking","WiFi","RestaurantsDelivery","HappyHour","smoking",
+"Alcohol","DogsAllowed","HasTV","OutdoorSeating","WheelchairAccessible","RestaurantsTakeOut","RestaurantsReservations",
+"RestaurantsTableService","DriveThru","parking")
+
+for(i in 1:length(z))
+{
+  min=min(d[,z[i]],na.rm=TRUE)
+  max=max(d[,z[i]],na.rm=TRUE)
+  for(j in 1:nrow(d))
+  {if(!is.na(d[j,z[i]]))
+   d[j,z[i]]=(d[j,z[i]]-min)/(max-min)
+  }
+}
+write.csv(d,"C:/Users/dell/Downloads/normalised.csv",row.names=FALSE)
+
+
+
+
